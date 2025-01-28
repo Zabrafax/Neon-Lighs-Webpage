@@ -1,13 +1,27 @@
 @keyframes pulsateText {
     0% {
-        text-shadow: 0px 0px 2px white, 0px 0px 4px white,
-        0px 0px 10px var(--second-color), 0px 0px 20px var(--second-color), 0px 0px 30px var(--second-color);
+        text-shadow: 0px 0px 0.08em white, 0px 0px 0.16em white,
+        0px 0px 0.41em var(--second-color), 0px 0px 0.82em var(--second-color), 0px 0px 1.25em var(--second-color);
     }
 
     100% {
-        text-shadow: 0px 0px 3px white, 0px 0px 4px white,
-        0px 0px 40px var(--second-color), 0px 0px 80px var(--second-color), 0px 0px 120px var(--second-color);
+        text-shadow: 0px 0px 0.15em white, 0px 0px 0.2em white,
+        0px 0px 2em var(--second-color), 0px 0px 3.3em var(--second-color), 0px 0px 5em var(--second-color);
     }
+}
+
+.neon__effect__text__static__white {
+    color: var(--second-light-color);
+    text-shadow: 0px 0px 0.05em white, 0px 0px 0.1em white, 0px 0px 0.2em white,
+        0px 0px 1em white, 0px 0px 1em white,
+        0px 0px 2em white, 0px 0px 3em white;
+}
+
+.neon__effect__text__static {
+    color: var(--second-light-color);
+    text-shadow: 0px 0px 0.05em white, 0px 0px 0.1em white, 0px 0px 0.2em white,
+        0px 0px 1em var(--second-color), 0px 0px 1em var(--second-color),
+        0px 0px 2em var(--second-color), 0px 0px 3em var(--second-color);
 }
 
 .neon__effect__text {
@@ -38,4 +52,11 @@
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: ease-in-out;
+}
+
+.neon__effect__static {
+    color: var(--second-light-color);
+    box-shadow: 0px 0px 0.05em white, 0px 0px 0.1em white, 0px 0px 0.2em white,
+        0px 0px 1em var(--second-color), 0px 0px 1em var(--second-color),
+        0px 0px 2em var(--second-color), 0px 0px 3em var(--second-color);
 }
