@@ -1,4 +1,5 @@
 * {
+    box-sizing: border-box;
     --primary-color: hsl(281, 100%, 20%);
     --primary-dark-color: hsl(281, 100%, 17%);
     --primary-ultra-dark-color: hsl(281, 100%, 14%);
@@ -18,9 +19,11 @@
 
 body {
     margin: 0px;
-    font-family: Verdana;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
     max-width: 100%;
+
+    background-color: var(--primary-ultra-dark-color);
 }
 
 header {
@@ -84,7 +87,7 @@ header {
 }
 
 .logo h2 {
-    font-family: "Mina", serif;
+    /*font-family: "Mina", serif;*/
     font-size: 1em;
 
     margin: 0;
@@ -101,10 +104,12 @@ header {
     height: 0.1em;
     padding: 0;
     margin: 0;
+    position: fixed;
 
     display: none;
     z-index: 1000;
-    position: relative;
+
+    background-color: white;
 
     border-width: 0;
 }
@@ -132,11 +137,14 @@ header {
 nav {
     width: 100%;
     height: fit-content;
+    position: fixed;
     
     display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    font-family: "MuseoModerno", serif;
 
     background-color: var(--primary-ultra-dark-color);
 }
@@ -146,7 +154,7 @@ nav a {
     width: 100%;
     padding: 15px 0px;
 
-    color: white;
+    color: antiquewhite;
     font-size: 1.3em;
     text-decoration: none;
 }
@@ -185,6 +193,7 @@ nav a:hover:not(.nav__active) {
     
     .hr__nav {
         display: block;
+        position: relative;
     }
 
     .nav__toggle {
@@ -193,9 +202,109 @@ nav a:hover:not(.nav__active) {
     nav {
         background-color: var(--primary-dark-color);
         display: flex;
+        position: relative;
         flex-direction: row;
     }
     nav a {
         font-size: 1em;
+    }
+}
+
+
+.content__container {
+    max-width: 2500px;
+    height: fit-content;
+    margin: auto;
+}
+
+.background__landing {
+    width: 100%;
+    height: fit-content;
+
+    font-size: 1em;
+
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    background-image: url('../images/neon-background2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: overlay;
+    overflow: hidden;
+}
+
+.background__landing h1 {
+    width: 75%;
+    margin: 0;
+    text-align: start;
+    padding: 0.75em;
+
+    color: antiquewhite;
+}
+
+.buttons__image__container {
+    width: 100%;
+    height: fit-content;
+    margin: 0;
+    margin-top: 2em;
+    align-self: flex-end;
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.buttons {
+    width: 100%;
+    height: 50px;
+}
+
+.background__landing p {
+    width: 100%;
+    margin: 0;
+    margin-left: auto;
+    text-align: center;
+    padding: 0.75em;
+    align-self: flex-end;
+    justify-self: flex-end;
+
+    font-family: "MuseoModerno", serif;
+
+    line-height: 95%;
+
+    font-size: 1.5em;
+    color: antiquewhite;
+}
+
+@media screen and (min-width: 480px) {
+    .background__landing {
+        font-size: 1.05em;
+    }
+    .buttons__image__container {
+        margin-top: 3em;
+    }
+    .background__landing p {
+        
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .background__landing {
+        font-size: 1.25em;
+    }
+    .buttons__image__container {
+        margin-top: 5em;
+    }
+    .background__landing p {
+        width: 55%;
+        text-align: end;
+    }
+    .buttons {
+        width: 45%;
     }
 }

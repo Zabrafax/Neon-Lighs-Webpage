@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/neon.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mina:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mina:wght@400;700&family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="icon" type="images/x-icon" href="images/favicon.ico">
 </head>
 
@@ -26,8 +26,8 @@
                 <input type="checkbox" id="toggle-menu">
                 <label for="toggle-menu">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
-                    </svg>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>  
                 </label>
             </div>
         </div>
@@ -43,9 +43,11 @@
     </header>
 
     <script>
-        document.querySelector('#toggle-menu').addEventListener('change', function() {
-            const nav = document.querySelector('nav');
-            const hr = document.querySelector('.hr__nav');
+        const toggleMenu = document.querySelector('#toggle-menu');
+        const nav = document.querySelector('nav');
+        const hr = document.querySelector('.hr__nav');
+
+        toggleMenu.addEventListener('change', function() {
             if (this.checked) {
                 nav.style.display = 'flex';
                 hr.style.display = 'block';
@@ -54,7 +56,34 @@
                 hr.style.display = 'none';
             }
         });
+
+        function updateNavVisibility() {
+            if (window.matchMedia("(min-width: 768px)").matches) {
+                document.querySelector('nav').style.display = 'flex';
+                document.querySelector('.hr__nav').style.display = 'block';
+            } else {
+                if (!toggleMenu.checked) {
+                    nav.style.display = 'none';
+                    hr.style.display = 'none';
+                }
+            }
+        }
+
+        updateNavVisibility();
+        window.addEventListener("resize", updateNavVisibility);
     </script>
+
+    <div class="content__container">
+        <div class="background__landing">
+            <h1>Your Way to Modern Neon Signs</h1>
+            <div class="buttons__image__container">
+                <p>Working since 1971 and only high-quality bussines expirience with excellent reviews</p>
+                <div class="buttons">
+
+                </div>
+            </div>
+        </div>
+    </div>
 
     <p>Aboba</p>
 </body>
