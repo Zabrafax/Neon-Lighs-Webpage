@@ -61,7 +61,7 @@
     padding: 0.5em 0.5em;
     text-align: center;
 
-    border: 0.1em solid white;
+    border: 0.1em solid antiquewhite;
     border-radius: 1.2em;
 
     font-family: "MuseoModerno", serif;
@@ -69,25 +69,23 @@
 }
 
 .white__button, .white__button:link, .white__button:visited{
-    background-color: white;
+    background-color: antiquewhite;
     color: black;
 }
 
 .white__button:hover {
-    cursor: grab;
-    background-color: rgb(233, 233, 233);
-    border-color: rgb(233, 233, 233);
+    background-color: bisque;
+    border-color: bisque;
 }
 
 .blur__button, .blur__button:link, .blur__button:visited{
     backdrop-filter: blur(25px);
-    color: white;
+    color: antiquewhite;
 }
 
 .blur__button:hover{
-    cursor: grab;
     background-color: rgba(0, 0, 0, 0.5);
-    border-color: gainsboro;
+    border-color: bisque;
 }
 
 .background__landing p {
@@ -111,11 +109,11 @@
 
 
 .custom__landing {
+    padding-bottom: 4rem;
+
     display: flex;
     flex-direction: column;
     position: relative;
-
-    padding-bottom: 4rem;
 
     overflow: hidden;
 
@@ -166,6 +164,7 @@
     margin-top: 0.5rem;
 
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -201,6 +200,8 @@
 
     text-align: center;
     font-family: "MuseoModerno", serif;
+    font-weight: 400;
+    font-style: italic;
 
     line-height: 120%;
 
@@ -210,17 +211,136 @@
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 
-.cheap_content {
+.cheap_landing {
+    padding-bottom: 4rem;
+
     display: flex;
     flex-direction: column;
-
-    padding-bottom: 4rem;
 
     overflow: hidden;
 
     color: antiquewhite;
+    background-color: var(--primary-color);
 }
 
+.package__container {
+    width: 100%;
+    height: fit-content;
+    margin-top: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    overflow: hidden;
+
+    text-align: center;
+}
+
+.package__container p {
+    width: 100%;
+    margin-top: 0.5rem;
+
+    text-align: center;
+    font-family: "MuseoModerno", serif;
+
+    line-height: 120%;
+
+    font-size: 1rem;
+}
+
+.packeges {
+    width: 100%;
+    height: fit-content;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2%;
+
+    overflow: hidden;
+}
+
+.package {
+    width: 100%;
+    height: fit-content;
+    padding: 1.5rem 1.5rem;
+    margin-top: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+
+    text-align: left;
+
+    border: 2px solid antiquewhite;
+    border-radius: 2rem;
+}
+
+.package h2 {
+    margin-top: 0.25rem;
+}
+
+.package p {
+    margin-top: 0.5rem;
+    text-align: left;
+}
+
+.package__features__list {
+    width: 100%;
+    height: fit-content;
+    margin-top: 1.5rem;
+
+    list-style: none;
+}
+
+.package__features__list li {
+    margin-top: 2rem;
+    position: relative;
+    padding-left: 2.5rem;
+}
+
+.package__features__list li:first-child {
+    margin-top: 0;
+}
+
+.package__features__list li::before {
+    content: "";
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    color: black;
+    background-color: antiquewhite;
+    border-radius: 50%;
+    border: 0.25rem solid antiquewhite;
+}
+
+.package__button, .package__button:link, .package__button:active, .package__button:visited{
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+
+    text-align: center;
+    font-family: "MuseoModerno", serif;
+    font-weight: 600;
+
+    background-color: antiquewhite;
+    border-radius: 1rem;
+
+    color: black;
+}
+
+.package__button:hover {
+    background-color:bisque;
+}
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
@@ -248,6 +368,10 @@
     .description__column__text {
         text-align: left;
     }
+
+    .package {
+        width: 30%;
+    }
 }
 
 @media screen and (min-width: 1280px) {
@@ -267,12 +391,13 @@
     }
 
     .column__description {
-        width: 50%;
+        width: 35%;
         height: fit-content;
         padding-left: 2rem;
         padding-right: 2rem;
     }
+
+    .package {
+        width: 400px;
+    }
 }
-
-
-/
