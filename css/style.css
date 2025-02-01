@@ -166,6 +166,74 @@ nav a:hover:not(.nav__active) {
         0px 0px 2em white, 0px 0px 3em white;
 }
 
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+footer {
+    width: 100%;
+    height: fit-content;
+    padding: 2rem 0rem 3rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    row-gap: 1rem;
+
+    background-color: var(--primary-dark-color);
+    color: antiquewhite;
+}
+
+.footer__container {
+    width: 100%;
+    height: fit-content;
+    padding: 0 30%;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__container svg {
+    width: 1.2rem;
+    height: 1.2rem;
+
+    vertical-align: sub;
+}
+
+.footer__container h4 {
+    font-weight: 300;
+}
+
+.footer__container p {
+    font-family: "MuseoModerno", serif;
+    font-weight: 200;
+    font-style: italic;
+
+    line-height: 120%;
+}
+
+.footer__container a {
+    font-family: "MuseoModerno", serif;
+    font-weight: 200;
+    font-style: italic;
+    text-decoration: none;
+
+    line-height: 120%;
+    color: antiquewhite;
+}
+
+.footer__container a:hover{
+    color: var(--second-color);
+}
+
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
 @media screen and (min-width: 480px) {
     body {
         font-size: 18px;
@@ -207,5 +275,17 @@ nav a:hover:not(.nav__active) {
     }
     nav a {
         font-size: 1em;
+    }
+
+    .footer__container {
+        width: 50%;
+        padding: 0 10%;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .footer__container {
+        width: 25%;
+        padding: 0;
     }
 }
