@@ -173,7 +173,7 @@ nav a:hover:not(.nav__active) {
 footer {
     width: 100%;
     height: fit-content;
-    padding: 2rem 0rem 3rem;
+    padding: 1rem 0rem 3rem;
 
     display: flex;
     flex-wrap: wrap;
@@ -277,6 +277,10 @@ footer {
         font-size: 1em;
     }
 
+    footer {
+        padding-top: 2rem;
+    }
+
     .footer__container {
         width: 50%;
         padding: 0 10%;
@@ -284,6 +288,10 @@ footer {
 }
 
 @media screen and (min-width: 1280px) {
+    footer {
+        padding-top: 2rem;
+    }
+
     .footer__container {
         width: 25%;
         padding: 0;
