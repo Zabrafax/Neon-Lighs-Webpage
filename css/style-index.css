@@ -66,6 +66,7 @@
 
     font-family: "MuseoModerno", serif;
     font-weight: 600;
+    text-decoration: none;
 }
 
 .white__button, .white__button:link, .white__button:visited{
@@ -115,10 +116,10 @@
     flex-direction: column;
     position: relative;
 
-    overflow: hidden;
-
     color: black;
     z-index: -1;
+
+    scroll-margin-top: 80px;
 }
 
 .custom__landing::before {
@@ -331,6 +332,7 @@
     text-align: center;
     font-family: "MuseoModerno", serif;
     font-weight: 600;
+    text-decoration: none;
 
     background-color: antiquewhite;
     border-radius: 1rem;
@@ -342,12 +344,112 @@
     background-color:bisque;
 }
 
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+.subscription {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+
+    background-color: antiquewhite;
+}
+
+.subscription__description {
+    margin-top: 1rem;
+
+    font-family: "MuseoModerno", serif;
+    font-weight: 400;
+    text-decoration: none;
+    line-height: 120%;
+}
+
+.subscribe__form {
+    width: 100%;
+    margin-top: 1rem;
+
+    text-align: left;
+    font-family: "MuseoModerno", serif;
+    font-weight: 600;
+    text-decoration: none;
+    line-height: 120%;
+}
+
+.subscribe__form label {
+    margin-left: 0.5rem;
+    align-self: flex-start;
+}
+
+.subscribe__container{
+    width: 100%;
+    height: fit-content;
+    margin-top: 0.25rem;
+
+    display: flex;
+    overflow: hidden;
+
+    background-color: var(--primary-color);
+    border-radius: 0.75rem;
+}
+
+.email__input {
+    width: 70%;
+    height: 3rem;
+    padding: 0rem 0.75rem;
+    padding-right: 0;
+
+    border: none;
+    outline: none;
+
+    text-align: left;
+    font-family: "MuseoModerno", serif;
+    font-weight: 600;
+    text-decoration: none;
+    line-height: 120%;
+    font-size: 1rem;
+
+    color: antiquewhite;
+    background-color: transparent;
+    border-radius: 0.75rem 0rem 0rem 0.75rem;
+}
+
+.subscribe-button {
+    width: 30%;
+    border: none;
+    outline: none;
+    margin: 0.4rem 0.4rem 0.4rem 0.75rem;
+
+    text-align: center;
+    font-family: "MuseoModerno", serif;
+    font-weight: 600;
+    text-decoration: none;
+    line-height: 120%;
+
+    color: black;
+    background-color: antiquewhite;
+    border-radius: 0.35rem;
+}
+
+.subscribe-button:hover {
+    cursor: pointer;
+    background: bisque;
+}
+
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 
 @media screen and (min-width: 480px) {
     .buttons__image__container {
         margin-top: 5rem;
+    }
+
+    .custom__landing {
+        scroll-margin-top: 95px;
     }
 }
 
@@ -357,6 +459,10 @@
     }
     .button {
         width: 35%;
+    }
+
+    .custom__landing {
+        scroll-margin-top: 174px;
     }
 
     .column__description {
@@ -371,6 +477,11 @@
 
     .package {
         width: 30%;
+    }
+
+    .subscribe__form {
+        align-self: center;
+        max-width: 768px;
     }
 }
 

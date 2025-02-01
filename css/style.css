@@ -2,7 +2,9 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    --primary-color: hsl(281, 100%, 20%);
+    scroll-behavior: smooth;
+
+    --primary-color: hsl(281, 100%, 26%);
     --primary-dark-color: hsl(281, 100%, 17%);
     --primary-ultra-dark-color: hsl(281, 100%, 14%);
 
