@@ -170,8 +170,30 @@ nav a:hover:not(.nav__active) {
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 
+.content__container {
+    max-width: 2500px;
+    height: fit-content;
+    margin: auto;
+
+    background-color: antiquewhite;
+}
+
+.content {
+    width: 100%;
+    min-height: fit-content;
+
+    padding: 1.25rem;
+
+    font-size: 1rem;
+}
+
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
 footer {
     width: 100%;
+    min-height: 200px;
     height: fit-content;
     padding: 1rem 0rem 3rem;
 
@@ -288,6 +310,10 @@ footer {
 }
 
 @media screen and (min-width: 1280px) {
+    .content__container {
+        min-height: calc(var(--vh, 1vh)* 100 - 200px - 178px);
+    }
+
     footer {
         padding-top: 2rem;
     }
