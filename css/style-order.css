@@ -1,0 +1,97 @@
+.order__content p {
+    width: 100%;
+    margin-left: auto;
+    margin-top: 0.5rem;
+    text-align: left;
+    align-self: flex-end;
+    justify-self: flex-end;
+
+    font-family: "MuseoModerno", serif;
+
+    line-height: 120%;
+
+    font-size: 1.5rem;
+    color: black;
+}
+
+.form__content {
+    color: antiquewhite;
+    background-color: var(--primary-color);
+}
+
+.order__form__container {
+    width: 100%;
+    height: fit-content;
+    margin: auto;
+    margin-top: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.order__form__container label {
+    margin-top: 1rem;
+    text-align: left;
+
+    font-weight: 700;
+}
+
+.order__form__container input[type="text"], .order__form__container input[type="email"], 
+.order__form__container textarea {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.75rem 0.5rem;
+
+    border: none;
+
+    text-align: left;
+    font-family: "MuseoModerno", serif;
+    font-weight: 600;
+    text-decoration: none;
+    line-height: 120%;
+    font-size: 1rem;
+
+    border-radius: 0.75rem;
+    background-color: antiquewhite;
+}
+
+.error {
+    outline: 2px solid red;
+}
+
+.submit__button {
+    width: 50%;
+    border: none;
+    outline: none;
+    margin-top: 1.5rem;
+    padding: 1rem 1rem;
+
+    align-self: center;
+
+    text-align: center;
+    font-family: "MuseoModerno", serif;
+    font-weight: 600;
+    text-decoration: none;
+    line-height: 120%;
+    font-size: 1rem;
+
+    color: black;
+    background-color: antiquewhite;
+    border-radius: 0.75rem;
+}
+
+.submit__button:hover {
+    cursor: pointer;
+    background: bisque;
+}
+
+@media screen and (min-width: 768px) {
+    .order__form__container {
+        max-width: 768px;
+    }
+
+    .submit__button {
+        max-width: 400px;
+    }
+}
