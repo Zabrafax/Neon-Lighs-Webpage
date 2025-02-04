@@ -411,7 +411,7 @@ input:-webkit-autofill:active {
     -webkit-text-fill-color: antiquewhite;
 }
 
-.subscribe-button {
+.subscribe__button {
     width: 30%;
     border: none;
     outline: none;
@@ -428,7 +428,7 @@ input:-webkit-autofill:active {
     border-radius: 0.35rem;
 }
 
-.subscribe-button:hover {
+.subscribe__button:hover {
     cursor: pointer;
     background: bisque;
 }

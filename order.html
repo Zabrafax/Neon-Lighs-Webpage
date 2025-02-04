@@ -7,7 +7,7 @@
     <title>Radiant Pulse</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/neon.css">
-    <link rel="stylesheet" href="css/style-about.css">
+    <link rel="stylesheet" href="css/style-order.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mina:wght@400;700&family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -76,7 +76,48 @@
 
     <div class="content__container">
 
+        <div class="order__content content">
+            <h1>Just order now</h1>
+            <p>We will call you after to discuss a date and a time of your visit to our factory office to start making your order</p>
+        </div>
+
+        <div class="form__content content">
+            <h1>Fill in our form and that's all</h1>
+
+            <div class="order__form__container">
+                <label for="input__fname">Name*</label>
+                <input type="text" id="input__fname" name="fname" class="required">
+
+                <label for="input__email">Email*</label>
+                <input type="email" id="input__email" name="email" class="required">
+
+                <label for="input__phone">Phone*</label>
+                <input type="text" id="input__phone" name="phone" class="required">
+
+                <label for="input__company">Company</label>
+                <input type="text" id="input__company" name="company">
+
+                <label for="input__message">Your wishes</label>
+                <textarea rows="10"></textarea>
+
+                <button class="submit__button" id="submit" type="submit">Subscribe</button>
+            </div>
+
+            <script>
+                document.getElementById("submit").addEventListener("click", function (event) {
+                    const inputs = document.querySelectorAll(".required");
         
+                    inputs.forEach(input => {
+                        if (input.value.trim() === "") {
+                            input.classList.add("error");
+                        } else {
+                            input.classList.remove("error");
+                        }
+                    });
+                });
+            </script>
+
+        </div>
 
     </div>
 
