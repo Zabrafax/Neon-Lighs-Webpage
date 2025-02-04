@@ -303,6 +303,10 @@ footer {
         padding-top: 2rem;
     }
 
+    .content__container {
+        min-height: calc(1vh * 100 - 327px - 178px);
+    }
+
     .footer__container {
         width: 50%;
         padding: 0 10%;

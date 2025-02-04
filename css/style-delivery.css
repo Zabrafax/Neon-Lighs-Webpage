@@ -1,0 +1,15 @@
+.content p {
+    width: 100%;
+    margin-left: auto;
+    margin-top: 0.5rem;
+    text-align: left;
+    align-self: flex-end;
+    justify-self: flex-end;
+
+    font-family: "MuseoModerno", serif;
+
+    line-height: 120%;
+
+    font-size: 1.5rem;
+    color: black;
+}
