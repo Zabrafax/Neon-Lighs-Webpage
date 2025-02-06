@@ -56,6 +56,10 @@
     background-color: antiquewhite;
 }
 
+.order__form__container textarea {
+    resize: none;
+}
+
 .error {
     outline: 2px solid red;
 }
