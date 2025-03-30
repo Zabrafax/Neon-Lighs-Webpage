@@ -43,37 +43,6 @@
         </nav>
     </header>
 
-    <script>
-        const toggleMenu = document.querySelector('#toggle-menu');
-        const nav = document.querySelector('nav');
-        const hr = document.querySelector('.hr__nav');
-
-        toggleMenu.addEventListener('change', function() {
-            if (this.checked) {
-                nav.style.display = 'flex';
-                hr.style.display = 'block';
-            } else {
-                nav.style.display = 'none';
-                hr.style.display = 'none';
-            }
-        });
-
-        function updateNavVisibility() {
-            if (window.matchMedia("(min-width: 768px)").matches) {
-                document.querySelector('nav').style.display = 'flex';
-                document.querySelector('.hr__nav').style.display = 'block';
-            } else {
-                if (!toggleMenu.checked) {
-                    nav.style.display = 'none';
-                    hr.style.display = 'none';
-                }
-            }
-        }
-
-        updateNavVisibility();
-        window.addEventListener("resize", updateNavVisibility);
-    </script>
-
     <div class="content__container">
 
         <div class="about__content content">
@@ -142,6 +111,40 @@
             <a href="about.html">About Us</a>
         </div>
     </footer>
+
+
+    <script>
+        const toggleMenu = document.querySelector('#toggle-menu');
+        const nav = document.querySelector('nav');
+        const hr = document.querySelector('.hr__nav');
+
+        toggleMenu.addEventListener('change', function() {
+            if (this.checked) {
+                nav.style.display = 'flex';
+                hr.style.display = 'block';
+            } else {
+                nav.style.display = 'none';
+                hr.style.display = 'none';
+            }
+        });
+
+        function updateNavVisibility() {
+            if (window.matchMedia("(min-width: 768px)").matches) {
+                document.querySelector('nav').style.display = 'flex';
+                document.querySelector('.hr__nav').style.display = 'block';
+            } else {
+                if (!toggleMenu.checked) {
+                    nav.style.display = 'none';
+                    hr.style.display = 'none';
+                }
+            }
+        }
+
+        updateNavVisibility();
+        window.addEventListener("resize", updateNavVisibility);
+    </script>
+
+
 </body>
 
 </html>
